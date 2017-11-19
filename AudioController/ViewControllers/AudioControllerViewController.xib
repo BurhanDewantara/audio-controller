@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioControllerViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioControllerViewController" customModule="AudioController" customModuleProvider="target">
             <connections>
+                <outlet property="playButton" destination="M9c-NF-MIo" id="XGP-VV-aIl"/>
+                <outlet property="recordButton" destination="oTe-JQ-l0L" id="0Qg-rU-jnI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +21,39 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTe-JQ-l0L">
+                    <rect key="frame" x="32" y="573" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Ene-6J-ZsP"/>
+                        <constraint firstAttribute="width" constant="90" id="seq-G1-68R"/>
+                    </constraints>
+                    <state key="normal" title="Record"/>
+                    <connections>
+                        <action selector="recordButtonOnPressed:" destination="-1" eventType="touchUpInside" id="VVt-DE-9ns"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9c-NF-MIo">
+                    <rect key="frame" x="253" y="573" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="8Zb-D2-VJs"/>
+                        <constraint firstAttribute="height" constant="30" id="kkt-F0-Ehm"/>
+                    </constraints>
+                    <state key="normal" title="Play"/>
+                    <connections>
+                        <action selector="playButtonOnPressed:" destination="-1" eventType="touchUpInside" id="rsQ-pf-Y9q"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oTe-JQ-l0L" secondAttribute="bottom" constant="64" id="2pP-ez-DVR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="M9c-NF-MIo" secondAttribute="bottom" constant="64" id="al8-c5-8ZV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M9c-NF-MIo" secondAttribute="trailing" constant="32" id="stg-pC-UIO"/>
+                <constraint firstItem="oTe-JQ-l0L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="xlY-ce-n4u"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
 </document>

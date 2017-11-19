@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8415B64F1FC1D27F002ACE1A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8415B64D1FC1D27F002ACE1A /* RxSwift.framework */; };
+		8415B6501FC1D27F002ACE1A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8415B64E1FC1D27F002ACE1A /* Swinject.framework */; };
+		8461A81A1FB61BAB00874A67 /* AudioControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461A8181FB61BAB00874A67 /* AudioControllerViewController.swift */; };
+		8461A81B1FB61BAB00874A67 /* AudioControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8461A8191FB61BAB00874A67 /* AudioControllerViewController.xib */; };
+		8461A81D1FB61D8300874A67 /* AudioControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461A81C1FB61D8300874A67 /* AudioControllerViewModel.swift */; };
 		84CD66CA1FB614D100814A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66C91FB614D100814A10 /* AppDelegate.swift */; };
 		84CD66CC1FB614D100814A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66CB1FB614D100814A10 /* ViewController.swift */; };
 		84CD66CF1FB614D100814A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD66CD1FB614D100814A10 /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8415B64D1FC1D27F002ACE1A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		8415B64E1FC1D27F002ACE1A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		8461A8181FB61BAB00874A67 /* AudioControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControllerViewController.swift; sourceTree = "<group>"; };
+		8461A8191FB61BAB00874A67 /* AudioControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioControllerViewController.xib; sourceTree = "<group>"; };
+		8461A81C1FB61D8300874A67 /* AudioControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControllerViewModel.swift; sourceTree = "<group>"; };
 		84CD66C61FB614D100814A10 /* AudioController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD66C91FB614D100814A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CD66CB1FB614D100814A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8415B64F1FC1D27F002ACE1A /* RxSwift.framework in Frameworks */,
+				8415B6501FC1D27F002ACE1A /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +86,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8415B64C1FC1D27F002ACE1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8415B64D1FC1D27F002ACE1A /* RxSwift.framework */,
+				8415B64E1FC1D27F002ACE1A /* Swinject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8461A8131FB6185500874A67 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8461A8141FB61AF600874A67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8461A81C1FB61D8300874A67 /* AudioControllerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8461A8151FB61AFC00874A67 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8461A8161FB61B0600874A67 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8461A8181FB61BAB00874A67 /* AudioControllerViewController.swift */,
+				8461A8191FB61BAB00874A67 /* AudioControllerViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8461A8171FB61B1600874A67 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		84CD66BD1FB614D100814A10 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +140,7 @@
 				84CD66DD1FB614D100814A10 /* AudioControllerTests */,
 				84CD66E81FB614D100814A10 /* AudioControllerUITests */,
 				84CD66C71FB614D100814A10 /* Products */,
+				8415B64C1FC1D27F002ACE1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +157,11 @@
 		84CD66C81FB614D100814A10 /* AudioController */ = {
 			isa = PBXGroup;
 			children = (
+				8461A8161FB61B0600874A67 /* ViewControllers */,
+				8461A8141FB61AF600874A67 /* ViewModels */,
+				8461A8171FB61B1600874A67 /* Interactors */,
+				8461A8151FB61AFC00874A67 /* Entities */,
+				8461A8131FB6185500874A67 /* Services */,
 				84CD66C91FB614D100814A10 /* AppDelegate.swift */,
 				84CD66CB1FB614D100814A10 /* ViewController.swift */,
 				84CD66CD1FB614D100814A10 /* Main.storyboard */,
@@ -135,6 +200,7 @@
 				84CD66C21FB614D100814A10 /* Sources */,
 				84CD66C31FB614D100814A10 /* Frameworks */,
 				84CD66C41FB614D100814A10 /* Resources */,
+				8415B6511FC1D284002ACE1A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -233,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CD66D41FB614D100814A10 /* LaunchScreen.storyboard in Resources */,
+				8461A81B1FB61BAB00874A67 /* AudioControllerViewController.xib in Resources */,
 				84CD66D11FB614D100814A10 /* Assets.xcassets in Resources */,
 				84CD66CF1FB614D100814A10 /* Main.storyboard in Resources */,
 			);
@@ -254,13 +321,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8415B6511FC1D284002ACE1A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84CD66C21FB614D100814A10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8461A81A1FB61BAB00874A67 /* AudioControllerViewController.swift in Sources */,
 				84CD66CC1FB614D100814A10 /* ViewController.swift in Sources */,
 				84CD66CA1FB614D100814A10 /* AppDelegate.swift in Sources */,
+				8461A81D1FB61D8300874A67 /* AudioControllerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +515,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4W379XRKJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AudioController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newbeecorp.AudioController;
@@ -443,6 +534,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4W379XRKJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AudioController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newbeecorp.AudioController;

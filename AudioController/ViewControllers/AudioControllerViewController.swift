@@ -10,26 +10,27 @@ import UIKit
 
 class AudioControllerViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
 
-        // Do any additional setup after loading the view.
+    //MARK: - Actions
+    @IBAction func recordButtonOnPressed(_ sender: UIButton) {
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func playButtonOnPressed(_ sender: UIButton) {
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: -
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViewModel()
     }
-    */
+    
+    fileprivate func setupViewModel() {
+    
+    }
+
 
 }
