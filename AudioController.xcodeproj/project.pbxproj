@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8415B64F1FC1D27F002ACE1A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8415B64D1FC1D27F002ACE1A /* RxSwift.framework */; };
-		8415B6501FC1D27F002ACE1A /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8415B64E1FC1D27F002ACE1A /* Swinject.framework */; };
+		841290D51FD2534600C4C04C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D01FD2534600C4C04C /* Swinject.framework */; };
+		841290D61FD2534600C4C04C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D11FD2534600C4C04C /* SwinjectStoryboard.framework */; };
+		841290D91FD2534600C4C04C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D41FD2534600C4C04C /* RxSwift.framework */; };
+		841290E41FD2551D00C4C04C /* IOFileAdapterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841290E31FD2551D00C4C04C /* IOFileAdapterSpec.swift */; };
+		841290E51FD255F600C4C04C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D21FD2534600C4C04C /* Quick.framework */; };
+		841290E61FD255FE00C4C04C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290DA1FD2535200C4C04C /* Nimble.framework */; };
+		841290E71FD2562300C4C04C /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 841290DA1FD2535200C4C04C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		841290E81FD2562300C4C04C /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 841290D21FD2534600C4C04C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8415B6531FC1D425002ACE1A /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415B6521FC1D425002ACE1A /* AudioService.swift */; };
+		8415B6551FC1D48F002ACE1A /* IOFileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415B6541FC1D48F002ACE1A /* IOFileAdapter.swift */; };
+		8415B6671FC5C0C5002ACE1A /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415B6661FC5C0C5002ACE1A /* SwinjectStoryboard+Setup.swift */; };
 		8461A81A1FB61BAB00874A67 /* AudioControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461A8181FB61BAB00874A67 /* AudioControllerViewController.swift */; };
-		8461A81B1FB61BAB00874A67 /* AudioControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8461A8191FB61BAB00874A67 /* AudioControllerViewController.xib */; };
 		8461A81D1FB61D8300874A67 /* AudioControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461A81C1FB61D8300874A67 /* AudioControllerViewModel.swift */; };
 		84CD66CA1FB614D100814A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66C91FB614D100814A10 /* AppDelegate.swift */; };
-		84CD66CC1FB614D100814A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66CB1FB614D100814A10 /* ViewController.swift */; };
 		84CD66CF1FB614D100814A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD66CD1FB614D100814A10 /* Main.storyboard */; };
 		84CD66D11FB614D100814A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CD66D01FB614D100814A10 /* Assets.xcassets */; };
 		84CD66D41FB614D100814A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD66D21FB614D100814A10 /* LaunchScreen.storyboard */; };
-		84CD66DF1FB614D100814A10 /* AudioControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66DE1FB614D100814A10 /* AudioControllerTests.swift */; };
 		84CD66EA1FB614D100814A10 /* AudioControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD66E91FB614D100814A10 /* AudioControllerUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,21 +44,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		84940E811FD0835A00B74C94 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				841290E71FD2562300C4C04C /* Nimble.framework in Copy Files */,
+				841290E81FD2562300C4C04C /* Quick.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8415B64D1FC1D27F002ACE1A /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		8415B64E1FC1D27F002ACE1A /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		841290D01FD2534600C4C04C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		841290D11FD2534600C4C04C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		841290D21FD2534600C4C04C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		841290D41FD2534600C4C04C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		841290DA1FD2535200C4C04C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		841290E31FD2551D00C4C04C /* IOFileAdapterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOFileAdapterSpec.swift; sourceTree = "<group>"; };
+		8415B6521FC1D425002ACE1A /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		8415B6541FC1D48F002ACE1A /* IOFileAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOFileAdapter.swift; sourceTree = "<group>"; };
+		8415B6661FC5C0C5002ACE1A /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		8461A8181FB61BAB00874A67 /* AudioControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControllerViewController.swift; sourceTree = "<group>"; };
-		8461A8191FB61BAB00874A67 /* AudioControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioControllerViewController.xib; sourceTree = "<group>"; };
 		8461A81C1FB61D8300874A67 /* AudioControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControllerViewModel.swift; sourceTree = "<group>"; };
 		84CD66C61FB614D100814A10 /* AudioController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD66C91FB614D100814A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84CD66CB1FB614D100814A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84CD66CE1FB614D100814A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84CD66D01FB614D100814A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84CD66D31FB614D100814A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84CD66D51FB614D100814A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CD66DA1FB614D100814A10 /* AudioControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84CD66DE1FB614D100814A10 /* AudioControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControllerTests.swift; sourceTree = "<group>"; };
 		84CD66E01FB614D100814A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CD66E51FB614D100814A10 /* AudioControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD66E91FB614D100814A10 /* AudioControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControllerUITests.swift; sourceTree = "<group>"; };
@@ -64,8 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8415B64F1FC1D27F002ACE1A /* RxSwift.framework in Frameworks */,
-				8415B6501FC1D27F002ACE1A /* Swinject.framework in Frameworks */,
+				841290D91FD2534600C4C04C /* RxSwift.framework in Frameworks */,
+				841290D61FD2534600C4C04C /* SwinjectStoryboard.framework in Frameworks */,
+				841290D51FD2534600C4C04C /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841290E51FD255F600C4C04C /* Quick.framework in Frameworks */,
+				841290E61FD255FE00C4C04C /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,15 +117,43 @@
 		8415B64C1FC1D27F002ACE1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8415B64D1FC1D27F002ACE1A /* RxSwift.framework */,
-				8415B64E1FC1D27F002ACE1A /* Swinject.framework */,
+				841290DA1FD2535200C4C04C /* Nimble.framework */,
+				841290D21FD2534600C4C04C /* Quick.framework */,
+				841290D41FD2534600C4C04C /* RxSwift.framework */,
+				841290D01FD2534600C4C04C /* Swinject.framework */,
+				841290D11FD2534600C4C04C /* SwinjectStoryboard.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8415B6561FC1D4BA002ACE1A /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				841290E31FD2551D00C4C04C /* IOFileAdapterSpec.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		8415B6571FC1D4C5002ACE1A /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				8415B6541FC1D48F002ACE1A /* IOFileAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		8415B6651FC5C0AE002ACE1A /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				8415B6661FC5C0C5002ACE1A /* SwinjectStoryboard+Setup.swift */,
+			);
+			path = Swinject;
 			sourceTree = "<group>";
 		};
 		8461A8131FB6185500874A67 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8415B6521FC1D425002ACE1A /* AudioService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				8461A8181FB61BAB00874A67 /* AudioControllerViewController.swift */,
-				8461A8191FB61BAB00874A67 /* AudioControllerViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -157,13 +212,14 @@
 		84CD66C81FB614D100814A10 /* AudioController */ = {
 			isa = PBXGroup;
 			children = (
+				8415B6651FC5C0AE002ACE1A /* Swinject */,
 				8461A8161FB61B0600874A67 /* ViewControllers */,
 				8461A8141FB61AF600874A67 /* ViewModels */,
 				8461A8171FB61B1600874A67 /* Interactors */,
 				8461A8151FB61AFC00874A67 /* Entities */,
 				8461A8131FB6185500874A67 /* Services */,
+				8415B6571FC1D4C5002ACE1A /* Adapters */,
 				84CD66C91FB614D100814A10 /* AppDelegate.swift */,
-				84CD66CB1FB614D100814A10 /* ViewController.swift */,
 				84CD66CD1FB614D100814A10 /* Main.storyboard */,
 				84CD66D01FB614D100814A10 /* Assets.xcassets */,
 				84CD66D21FB614D100814A10 /* LaunchScreen.storyboard */,
@@ -175,7 +231,7 @@
 		84CD66DD1FB614D100814A10 /* AudioControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				84CD66DE1FB614D100814A10 /* AudioControllerTests.swift */,
+				8415B6561FC1D4BA002ACE1A /* Adapter */,
 				84CD66E01FB614D100814A10 /* Info.plist */,
 			);
 			path = AudioControllerTests;
@@ -200,7 +256,7 @@
 				84CD66C21FB614D100814A10 /* Sources */,
 				84CD66C31FB614D100814A10 /* Frameworks */,
 				84CD66C41FB614D100814A10 /* Resources */,
-				8415B6511FC1D284002ACE1A /* ShellScript */,
+				841290E91FD25A9500C4C04C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -218,6 +274,7 @@
 				84CD66D61FB614D100814A10 /* Sources */,
 				84CD66D71FB614D100814A10 /* Frameworks */,
 				84CD66D81FB614D100814A10 /* Resources */,
+				84940E811FD0835A00B74C94 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -263,6 +320,7 @@
 					};
 					84CD66D91FB614D100814A10 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84CD66C51FB614D100814A10;
 					};
@@ -299,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CD66D41FB614D100814A10 /* LaunchScreen.storyboard in Resources */,
-				8461A81B1FB61BAB00874A67 /* AudioControllerViewController.xib in Resources */,
 				84CD66D11FB614D100814A10 /* Assets.xcassets in Resources */,
 				84CD66CF1FB614D100814A10 /* Main.storyboard in Resources */,
 			);
@@ -322,7 +379,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8415B6511FC1D284002ACE1A /* ShellScript */ = {
+		841290E91FD25A9500C4C04C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,12 +387,13 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -344,8 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8415B6671FC5C0C5002ACE1A /* SwinjectStoryboard+Setup.swift in Sources */,
+				8415B6531FC1D425002ACE1A /* AudioService.swift in Sources */,
+				8415B6551FC1D48F002ACE1A /* IOFileAdapter.swift in Sources */,
 				8461A81A1FB61BAB00874A67 /* AudioControllerViewController.swift in Sources */,
-				84CD66CC1FB614D100814A10 /* ViewController.swift in Sources */,
 				84CD66CA1FB614D100814A10 /* AppDelegate.swift in Sources */,
 				8461A81D1FB61D8300874A67 /* AudioControllerViewModel.swift in Sources */,
 			);
@@ -355,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CD66DF1FB614D100814A10 /* AudioControllerTests.swift in Sources */,
+				841290E41FD2551D00C4C04C /* IOFileAdapterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M4W379XRKJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,6 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M4W379XRKJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -552,12 +614,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4W379XRKJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AudioControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newbeecorp.AudioControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioController.app/AudioController";
@@ -569,8 +637,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4W379XRKJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AudioControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.newbeecorp.AudioControllerTests;
