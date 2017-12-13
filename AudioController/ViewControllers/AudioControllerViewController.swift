@@ -9,85 +9,33 @@
 import UIKit
 import AVFoundation
 
-class AudioControllerViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
-
+class AudioControllerViewController: UIViewController {//, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+    
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    var audioRecorder:AVAudioRecorder?
-    var audioPlayer:AVAudioPlayer?
-
+    var audioControllerViewModel:AudioControllerViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupRecorder()
+        self.setupViewModel()
     }
     
+    fileprivate func setupViewModel() {
+        self.audioControllerViewModel = AudioControllerViewModel.create()
+    }
+
     //MARK: - Actions
     @IBAction func stopButtonOnPressed(_ sender: UIButton) {
-        guard let currentRecorder = self.audioRecorder else { return }
-        stopRecord(recorder: currentRecorder)
+        self.audioControllerViewModel.stopRecordButtonTapped()
     }
-    
+
     @IBAction func recordButtonOnPressed(_ sender: UIButton) {
-        setSessionToRecord()
-        guard let currentRecorder = self.audioRecorder else { return }
-        record(recorder: currentRecorder)
+        self.audioControllerViewModel.recordButtonTapped()
     }
-    
+
     @IBAction func playButtonOnPressed(_ sender: UIButton) {
-        setSessionToPlay()
-        setupAudioPlayer()
-        self.audioPlayer?.play()
+        self.audioControllerViewModel.playButtonTapped()
     }
-    
-    //MARK: -
-    
-    func setupRecorder(){
-        setSessionToRecord()
-        prepareRecorder ()
-    }
-    
-    func setSessionToRecord () {
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
-        try? AVAudioSession.sharedInstance().setActive(true)
-    }
-
-    func getFileUrl (_ fileName:String) -> URL {
-        let adapter = IOFileAdapter()
-        let path = adapter.getDocumentDirectoryPath().appending(fileName)
-        return URL(fileURLWithPath: path)
-    }
-    
-    func prepareRecorder () {
-        let recordSetting: [String : Any] = [AVFormatIDKey:kAudioFormatAppleLossless,
-                                             AVSampleRateKey:44100.0,
-                                             AVNumberOfChannelsKey:2]
-        
-        self.audioRecorder = try? AVAudioRecorder(url: self.getFileUrl("/audio.m4a"), settings: recordSetting)
-        self.audioRecorder?.delegate = self
-        self.audioRecorder?.prepareToRecord()
-    }
-    
-    func record (recorder:AVAudioRecorder) {
-        recorder.record()
-    }
-    
-    func stopRecord (recorder:AVAudioRecorder) {
-        recorder.stop()
-        try? AVAudioSession.sharedInstance().setActive(false)
-    }
-    
-    func setSessionToPlay () {
-        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-        try? AVAudioSession.sharedInstance().setActive(true)
-    }
-    
-    func setupAudioPlayer() {
-        self.audioPlayer = try? AVAudioPlayer(contentsOf: self.getFileUrl("/audio.m4a"))
-        self.audioPlayer?.delegate = self
-        self.audioPlayer?.prepareToPlay()
-        self.audioPlayer?.volume = 1.0
-    }
-
 }

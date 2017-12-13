@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840030B31FE19F69007B8D55 /* AudioControllerViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840030B21FE19F69007B8D55 /* AudioControllerViewModelTest.swift */; };
+		840030B51FE19F88007B8D55 /* AudioPlayerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840030B41FE19F88007B8D55 /* AudioPlayerMock.swift */; };
 		841290D51FD2534600C4C04C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D01FD2534600C4C04C /* Swinject.framework */; };
 		841290D61FD2534600C4C04C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D11FD2534600C4C04C /* SwinjectStoryboard.framework */; };
 		841290D91FD2534600C4C04C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841290D41FD2534600C4C04C /* RxSwift.framework */; };
@@ -81,6 +83,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		840030B21FE19F69007B8D55 /* AudioControllerViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioControllerViewModelTest.swift; sourceTree = "<group>"; };
+		840030B41FE19F88007B8D55 /* AudioPlayerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerMock.swift; sourceTree = "<group>"; };
 		841290D01FD2534600C4C04C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		841290D11FD2534600C4C04C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		841290D21FD2534600C4C04C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840030B11FE19F69007B8D55 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				840030B21FE19F69007B8D55 /* AudioControllerViewModelTest.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		8415B64C1FC1D27F002ACE1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +248,7 @@
 		84A347931FDEDE35009FF2A1 /* MockClass */ = {
 			isa = PBXGroup;
 			children = (
+				840030B41FE19F88007B8D55 /* AudioPlayerMock.swift */,
 				84A347941FDEDE5F009FF2A1 /* AudioPlayerServiceMock.swift */,
 				841F9B5D1FDEEF82004AA04A /* IOFileAdapterMock.swift */,
 			);
@@ -286,6 +299,7 @@
 		84CD66DD1FB614D100814A10 /* AudioControllerTests */ = {
 			isa = PBXGroup;
 			children = (
+				840030B11FE19F69007B8D55 /* ViewModels */,
 				841F9B5A1FDEEEA9004AA04A /* Interactors */,
 				84A347901FDD9B66009FF2A1 /* Services */,
 				8415B6561FC1D4BA002ACE1A /* Adapters */,
@@ -442,6 +456,7 @@
 			files = (
 				8415B6671FC5C0C5002ACE1A /* SwinjectStoryboard+Setup.swift in Sources */,
 				841F9B5E1FDEEF82004AA04A /* IOFileAdapterMock.swift in Sources */,
+				840030B51FE19F88007B8D55 /* AudioPlayerMock.swift in Sources */,
 				8415B6531FC1D425002ACE1A /* AudioPlayerService.swift in Sources */,
 				8415B6551FC1D48F002ACE1A /* IOFileAdapter.swift in Sources */,
 				84A347951FDEDE5F009FF2A1 /* AudioPlayerServiceMock.swift in Sources */,
@@ -460,6 +475,7 @@
 				841F9B601FE03903004AA04A /* AudioPlayerTest.swift in Sources */,
 				846BBD0B1FE0464900D21D6A /* AudioPlayerServiceTest.swift in Sources */,
 				846BBD0D1FE197B100D21D6A /* IOFileAdapterTest.swift in Sources */,
+				840030B31FE19F69007B8D55 /* AudioControllerViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
