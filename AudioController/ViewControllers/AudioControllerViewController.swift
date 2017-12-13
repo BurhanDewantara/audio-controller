@@ -50,6 +50,7 @@ class AudioControllerViewController: UIViewController, AVAudioRecorderDelegate, 
     
     func setSessionToRecord () {
         try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryRecord)
+        try? AVAudioSession.sharedInstance().setActive(true)
     }
 
     func getFileUrl (_ fileName:String) -> URL {
@@ -63,7 +64,7 @@ class AudioControllerViewController: UIViewController, AVAudioRecorderDelegate, 
                                              AVSampleRateKey:44100.0,
                                              AVNumberOfChannelsKey:2]
         
-        self.audioRecorder = try? AVAudioRecorder(url: getFileUrl("/audio.m4a"), settings: recordSetting)
+        self.audioRecorder = try? AVAudioRecorder(url: self.getFileUrl("/audio.m4a"), settings: recordSetting)
         self.audioRecorder?.delegate = self
         self.audioRecorder?.prepareToRecord()
     }
@@ -74,14 +75,16 @@ class AudioControllerViewController: UIViewController, AVAudioRecorderDelegate, 
     
     func stopRecord (recorder:AVAudioRecorder) {
         recorder.stop()
+        try? AVAudioSession.sharedInstance().setActive(false)
     }
     
     func setSessionToPlay () {
         try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try? AVAudioSession.sharedInstance().setActive(true)
     }
     
     func setupAudioPlayer() {
-        self.audioPlayer = try? AVAudioPlayer(contentsOf: getFileUrl("/audio.m4a"))
+        self.audioPlayer = try? AVAudioPlayer(contentsOf: self.getFileUrl("/audio.m4a"))
         self.audioPlayer?.delegate = self
         self.audioPlayer?.prepareToPlay()
         self.audioPlayer?.volume = 1.0

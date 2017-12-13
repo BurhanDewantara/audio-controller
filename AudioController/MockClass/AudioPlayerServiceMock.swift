@@ -9,8 +9,9 @@
 import Foundation
 
 class AudioPlayerServiceMock: AudioPlayerServiceProtocol {
-    var audioPlayerSettings:AudioPlayerSettings?
-    var hasBeenCalled = Dictionary<String,Any>()
+    var hasCalled = Dictionary<String,Bool>()
+    var audioPlayerSettings: AudioPlayerSettings?
+    var fileUrlPath: URL?
     var isRecording: Bool
     var isPlaying: Bool
     
@@ -19,25 +20,25 @@ class AudioPlayerServiceMock: AudioPlayerServiceProtocol {
         isPlaying = false
     }
     
-    func playWith(audioPlayerSettings: AudioPlayerSettings) {
-        self.audioPlayerSettings = audioPlayerSettings
-        hasBeenCalled[#function] = true
+    func playWith(url fileUrlPath: URL) {
+        self.fileUrlPath = fileUrlPath
+        hasCalled["playWith"] = true
         isPlaying = true
     }
     
-    func recordWith(audioPlayerSettings: AudioPlayerSettings) {
+    func recordWith(settings audioPlayerSettings: AudioPlayerSettings) {
         self.audioPlayerSettings = audioPlayerSettings
-        hasBeenCalled[#function] = true
-        isRecording = false
+        hasCalled["recordWith"] = true
+        isRecording = true
     }
     
     func stopPlay() {
-        hasBeenCalled[#function] = true
+        hasCalled["stopPlay"] = true
         isPlaying = false
     }
     
     func stopRecord() {
-        hasBeenCalled[#function] = true
+        hasCalled["stopRecord"] = true
         isRecording = false
     }
     

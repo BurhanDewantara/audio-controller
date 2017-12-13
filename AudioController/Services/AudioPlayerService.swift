@@ -10,8 +10,8 @@ import UIKit
 import AVFoundation
 
 protocol AudioPlayerServiceProtocol {
-    func recordWith(audioPlayerSettings: AudioPlayerSettings)
-    func playWith(audioPlayerSettings: AudioPlayerSettings)
+    func recordWith(settings audioPlayerSettings: AudioPlayerSettings)
+    func playWith(url fileUrlPath: URL)
     func stopRecord()
     func stopPlay()
     var isPlaying: Bool { get }
@@ -37,13 +37,12 @@ class AudioPlayerService: AudioPlayerServiceProtocol {
         return audioRecorder.isRecording
     }
     
-    
     init(audioSession: AVAudioSession) {
         self.audioSession = audioSession
     }
     
     //MARK: - private
-    func recordWith(audioPlayerSettings : AudioPlayerSettings)
+    func recordWith(settings audioPlayerSettings : AudioPlayerSettings)
     {
         setSession(category: AVAudioSessionCategoryRecord)
         guard let settings = audioPlayerSettings.recorderSettings,
@@ -54,7 +53,6 @@ class AudioPlayerService: AudioPlayerServiceProtocol {
         guard let audioRecorder = self.audioRecorder else { return }
         
         audioRecorder.record()
-        
     }
     
     func stopRecord() {
@@ -63,12 +61,11 @@ class AudioPlayerService: AudioPlayerServiceProtocol {
         audioRecorder.stop()
     }
     
-    func playWith(audioPlayerSettings : AudioPlayerSettings)
+    func playWith(url fileUrlPath: URL)
     {
         setSession(category: AVAudioSessionCategoryPlayback)
-        guard let path = audioPlayerSettings.fileUrlPath else { return }
-
-        preparePlayer(fileUrlPath: path)
+        
+        preparePlayer(fileUrlPath: fileUrlPath)
         guard let audioPlayer = self.audioPlayer else { return }
         
         audioPlayer.play()
@@ -87,7 +84,12 @@ class AudioPlayerService: AudioPlayerServiceProtocol {
     }
     
     fileprivate func preparePlayer(fileUrlPath: URL) {
-        self.audioPlayer = try? AVAudioPlayer(contentsOf: fileUrlPath)
+        do {
+            self.audioPlayer = try AVAudioPlayer(contentsOf: fileUrlPath)
+        } catch {
+            print (error)
+        }
+            
         guard let audioPlayer = self.audioPlayer else { return }
         audioPlayer.volume = 1.0
         audioPlayer.prepareToPlay()
